@@ -1,0 +1,221 @@
+// colors
+$bg-color: #f6f5f1;
+$bear-color: #343233;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: $bg-color;
+  overflow: hidden;
+
+  * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+  }
+}
+
+.ear {
+  z-index: 2;
+  width: 18vmin;
+  height: 0;
+  border-bottom: 12vmin solid $bear-color;
+  border-left: 4.3vmin solid transparent;
+  border-right: 4.3vmin solid transparent;
+  top: -50vmin;
+  left: -64.5vmin;
+  transform: rotate(-44deg);
+
+  &::before {
+    width: 9.7vmin;
+    height: 8vmin;
+    background: $bear-color;
+    top: -3vmin;
+    left: -0.1vmin;
+    border-radius: 50%;
+  }
+}
+
+.ear-right {
+  left: 64.5vmin;
+  transform: rotate(44deg) scaleX(-1);
+}
+
+.head {
+  width: 81vmin;
+  height: 66vmin;
+  background: $bear-color;
+  top: -0.5vmin;
+  border-radius: 32vmin 32vmin 50% 50%;
+
+  &::before {
+    z-index: 5;
+    width: 0;
+    height: 0;
+    border-top: 9vmin solid $bear-color;
+    border-left: 19vmin solid transparent;
+    border-right: 19vmin solid transparent;
+    left: 21.5vmin;
+    bottom: -5vmin;
+  }
+}
+
+.eye {
+  z-index: 3;
+  width: 12vmin;
+  height: 12vmin;
+  background: $bear-color;
+  top: -2.5vmin;
+  left: -17vmin;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.6vmin $bg-color,
+    0 0 0 1.9vmin $bear-color,
+    0 0 0 2.5vmin $bg-color,
+    0 0 0 3.8vmin $bear-color,
+    0 0 0 4.3vmin $bg-color,
+    0 0 0 5.6vmin $bear-color,
+    0 0 0 6.1vmin $bg-color,
+    0 0 0 7.4vmin $bear-color,
+    0 0 0 7.9vmin $bg-color,
+    0 0 0 9.2vmin $bear-color,
+    0 0 0 9.7vmin $bg-color,
+    0 0 0 11vmin $bear-color,
+    0 0 0 11.6vmin $bg-color,
+    0 0 0 12.8vmin $bear-color,
+    0 0 0 13.4vmin $bg-color,
+    0 0 0 14.7vmin $bear-color,
+    0 0 0 15.2vmin $bg-color;
+}
+
+.eye-right {
+  z-index: 2;
+  left: 17.1vmin;
+}
+
+.eye-right-2 {
+  z-index: 3;
+  width: 12vmin;
+  height: 12vmin;
+  background: $bear-color;
+  top: -2.4vmin;
+  left: 17.1vmin;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.6vmin $bg-color,
+    0 0 0 1.9vmin $bear-color,
+    0 0 0 2.5vmin $bg-color,
+    0 0 0 3.8vmin $bear-color,
+    0 0 0 4.3vmin $bg-color,
+    0 0 0 5.6vmin $bear-color,
+    0 0 0 6.1vmin $bg-color;
+}
+
+.face {
+  z-index: 4;
+  width: 10.7vmin;
+  height: 14vmin;
+  background: $bg-color;
+  top: -23.5vmin;
+  left: -11.7vmin;
+  border-radius: 20vmin 0 0 0;
+  transform: rotate(6deg) skewY(-27.5deg);
+
+  &::before {
+    width: 10.7vmin;
+    height: 14vmin;
+    background: $bg-color;
+    top: 4vmin;
+    left: 11.3vmin;
+    border-radius: 0 20vmin 0 0;
+    transform: rotate(-9.5deg) skewY(47.5deg);
+  }
+
+  &::after {
+    width: 20vmin;
+    height: 12vmin;
+    background: $bg-color;
+    top: 7.5vmin;
+    left: 2vmin;
+    border-radius: 5vmin 5vmin 0 0;
+    transform: rotate(-6deg) skewY(27.5deg);
+  }
+}
+
+.face-2 {
+  z-index: 4;
+  width: 18.4vmin;
+  height: 35vmin;
+  background: $bg-color;
+  top: 13vmin;
+  left: -0.2vmin;
+  border-radius: 0 0 9vmin 9vmin;
+
+  &::before {
+    width: 2vmin;
+    height: 2vmin;
+    background: $bg-color;
+    top: 8.8vmin;
+    left: -0.3vmin;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5vmin $bear-color;
+  }
+
+  &::after {
+    width: 2vmin;
+    height: 2vmin;
+    background: $bg-color;
+    top: 8.8vmin;
+    left: 16.8vmin;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5.1vmin $bear-color;
+  }
+}
+
+%face-3 {
+  z-index: 4;
+  width: 0;
+  height: 0;
+  border-top: 6.8vmin solid $bear-color;
+  border-right: 8.5vmin solid transparent;
+  top: 12.5vmin;
+  left: -12.3vmin;
+  transform: rotate(-40deg) skewX(-40deg);
+
+  &:before {
+    width: 1.5vmin;
+    height: 6vmin;
+    background: $bear-color;
+    top: -7vmin;
+    left: 3.8vmin;
+    transform: rotate(60deg);
+  }
+}
+
+.face-3 {
+  @extend %face-3;
+}
+
+.face-4 {
+  @extend %face-3;
+  left: 12vmin;
+  transform: rotate(40deg) skewX(40deg) scaleX(-1);
+}
+
+.mouth {
+  z-index: 4;
+  width: 14.8vmin;
+  height: 9.2vmin;
+  background: $bear-color;
+  top: 37vmin;
+  left: -0.4vmin;
+}
